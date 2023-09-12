@@ -4,7 +4,7 @@ A small 2D game made with Unity game engine for an internal event. The making of
 ![alt text](https://raw.githubusercontent.com/EverCG/monster-invasion-unity/main/ss-monster-invasion.png)
 
 ### Prerequisites
-* Unity Game Engine (v2021.3.11f1) - This is the latest version to which the project is upgraded.
+* Unity Game Engine (v2022.3.9f1) - This is the latest version to which the project is upgraded.
 * Using any versions above the recommended might require you to upgrade the project as Unity prompts.
 
 ### Running the project
