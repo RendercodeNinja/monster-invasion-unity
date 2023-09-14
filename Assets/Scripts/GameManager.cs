@@ -8,7 +8,7 @@
 /// ---------------------------------------------------------------------
 
 using MonsterInvasion.Generic;
-using System.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -75,7 +75,12 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Gets invoked when a GameOver occurs (from MonsterAI) 
     /// </summary>
-    public async void OnGameOver()
+    public void OnGameOver() => StartCoroutine(nameof(OnGameOverRoutine));
+
+    /// <summary>
+    /// Coroutine to handle GameOver state
+    /// </summary>    
+    private IEnumerator OnGameOverRoutine()
     {
         // Reset all enemies to startup state
         mMonsterManager.Reset();
@@ -92,8 +97,8 @@ public class GameManager : MonoBehaviour
         // Shake the camera
         mCameraShake.Shake();
 
-        // Wait for a second
-        await Task.Delay(1000);
+        // Hold a second
+        yield return new WaitForSeconds(1.0f);
 
         // Show the game over screen
         mUIManager.SetUIState(UIStates.GameOver);
