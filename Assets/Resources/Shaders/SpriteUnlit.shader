@@ -1,4 +1,4 @@
-﻿Shader "EverCG(Sethu)/Sprites/Unlit" 
+﻿Shader "Custom/Sprites/Unlit" 
 {	
 	Properties
 	{

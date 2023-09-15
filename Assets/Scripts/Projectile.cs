@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: Projectile.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Single projectile object movement and collision detection
 /// Target: LaserProjectile(Prefab)
 /// Instances: Multiple

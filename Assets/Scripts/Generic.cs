@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: Generic.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Custom data type defenitions within the project scope
 /// Target: None
 /// Instances: N/A

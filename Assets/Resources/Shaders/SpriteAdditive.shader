@@ -1,4 +1,4 @@
-﻿Shader "EverCG(Sethu)/Sprites/Additive" 
+﻿Shader "Custom/Sprites/Additive" 
 {	
 	Properties
 	{

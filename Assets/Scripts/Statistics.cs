@@ -1,7 +1,7 @@
 ﻿/// ------------------------------------------------------------------------------------
 /// File: Statistics.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Helper to display statistics information as an overlay on shortcut press
 /// Target: UIManager
 /// Instances: Single

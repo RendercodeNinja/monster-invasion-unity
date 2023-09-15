@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: TurretSystem.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Handles turret turning and projectile firing based on input
 /// Target: TurretSystem
 /// Instances: Single

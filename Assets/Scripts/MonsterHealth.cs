@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: MonsterHealth.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Handles Monster character health and damages
 /// Target: MonsterPrefab
 /// Instances: Multiple

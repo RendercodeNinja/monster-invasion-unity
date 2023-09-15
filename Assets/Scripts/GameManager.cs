@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: GameManager.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Game state management for MonsterInvasion
 /// Target: GameArena
 /// Instances: Single
