@@ -1,7 +1,7 @@
 ﻿/// ------------------------------------------------------------------------------------
 /// File: UIManager.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Game user interface elements animation and button click event handling
 /// Target: UIManager
 /// Instances: Single

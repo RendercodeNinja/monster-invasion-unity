@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: ParticlePool.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Resource pool handling system for Particle systems
 /// Target: ParticlePool
 /// Instances: Single

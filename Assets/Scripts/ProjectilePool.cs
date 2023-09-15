@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: ProjectilePool.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Resource pool handling system for Projectile objects
 /// Target: ProjectilePool
 /// Instances: Single

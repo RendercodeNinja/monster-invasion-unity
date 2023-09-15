@@ -1,9 +1,9 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: EnergyGenerator.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Handles energy generation for turret system. Continous
-///              usage of the turret depletes generator energy and the 
+///              usage of the turret depletes generator energy and the
 ///              player has to wait for energy to regenerate
 /// Target: Generators
 /// Instances: Single

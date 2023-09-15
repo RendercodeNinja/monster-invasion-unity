@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: MonsterAI.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Handles monster character movements and animations
 /// Target: MonsterPrefab
 /// Instances: Multiple

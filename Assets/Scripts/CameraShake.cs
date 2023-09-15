@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: CameraShake.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Helper script to create a simple camera shake effect with provided intensity and duration
 /// Target: MainCamera
 /// Instances: Single

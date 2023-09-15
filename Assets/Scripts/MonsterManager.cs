@@ -1,7 +1,7 @@
 ﻿/// ---------------------------------------------------------------------
 /// File: MonsterManager.cs
 /// Project: Monster Invasion
-/// Author: EverCG(Sethu)
+/// Author: RendercodeNinja
 /// Description: Handles monster character pool and spawning
 /// Target: MonsterManager
 /// Instances: Multiple
