@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Product name as page title -->
+    <title>Monster Invasion</title>
+    <!-- Page Styling -->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        /*-------------------------------------
+            SCAFFOLDING
+        -------------------------------------*/
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background: #2a2a2a;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        /*-------------------------------------
+            CONTAINERS
+        -------------------------------------*/
+
+        #unity-container {
+            position: absolute
+        }
+
+        #unity-container.unity-desktop {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        /*-------------------------------------
+            PRE-LOADER
+        -------------------------------------*/
+
+        .pre-loader {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            display: none;
+        }
+
+        .pre-loader .title {
+            color: #eee;
+            letter-spacing: 0.1em;
+        }
+
+        .progress-bar {
+            width: 40%;
+            padding: 5px;
+            background: #1a1a1a;
+            box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+            border-radius: 8px;
+        }
+
+        .progress-bar .fill {
+            background: #ffb921;
+            height: 24px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            line-height: 24px;
+            overflow: hidden;
+        }
+
+        /*-------------------------------------
+            AUTHORING
+        -------------------------------------*/
+
+        .authoring {
+            display: block;
+            position: absolute;
+            z-index: 1024;
+            right: 0;
+            top: 0;
+            margin-right: 32px;
+            margin-top: 32px;
+        }
+
+        .authoring img,
+        .authoring span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .authoring img {
+            margin-right: 0.25rem;
+        }
+
+        .btn-git {
+            padding: 4px 10px 4px 8px;
+            color: #333;
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: pointer;
+            border-radius: 32px;
+            background-color: #eee;
+            font-size: 0.75rem;
+            background-image: linear-gradient(180deg, #fcfcfc 0, #eee);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc", endColorstr="#eeeeee", GradientType=0);
+            background-repeat: no-repeat;
+            border: 1px solid #d5d5d5;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Unity Container/Canvas -->
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width=1024 height=768
+            style="width: 1024px; height: 768px; cursor:default;"></canvas>
+    </div>
+    <!-- Preloader -->
+    <div class="pre-loader">
+        <div class="progress-bar">
+            <div class="fill" style="width:20%;">10%</div>
+        </div>
+    </div>
+    <!-- Authoring -->
+    <div id="app-authoring" class="authoring">
+        <a href="https://github.com/RendercodeNinja/monster-invasion-unity" class="btn-git" target="blank">
+            <img src="TemplateData/github-mark-32px.png" alt="GitHub">
+            <span>View on <b>GitHub</b></span>
+        </a>
+    </div>
+</body>
+
+<script>
+    //Build path
+    const buildUrl = "Build";
+    //Loader path
+    const loaderUrl = buildUrl + "/WebGL.loader.js";
+    //Player configurations
+    const config = {
+        dataUrl: buildUrl + "/WebGL.data",
+        frameworkUrl: buildUrl + "/WebGL.framework.js",
+        codeUrl: buildUrl + "/WebGL.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "EverCG(Sethu)",
+        productName: "Monster Invasion",
+        productVersion: "0.0.11",
+    };
+
+    //Unity loader script
+    const unityLoader = document.createElement("script");
+    //Canvas renderer
+    const canvas = document.querySelector("#unity-canvas");
+    //Preloader element
+    const preLoader = document.querySelector(".pre-loader");
+    //Get the progressbar fill element
+    const progressBar = preLoader.querySelector(".progress-bar .fill");
+
+    //Set loader source
+    unityLoader.src = loaderUrl;
+
+    //Event - OnLoad
+    unityLoader.onload = () => {
+
+        //Keep canvas hidden
+        canvas.style.display = "none";
+        //Show the progress fill
+        preLoader.style.display = "flex";
+
+        //Create Unity instance (with callbacks)
+        createUnityInstance(canvas, config, (progress) => {
+
+            //Update the fill element width by progress
+            progressBar.style.width = progressBar.textContent = `${Math.round(progress * 100)}%`;
+
+            //If progress reached end
+            if (progress > 0.95 && !unityLoader.setTimeOut) {
+                //Invoke with delay
+                unityLoader.setTimeOut = setTimeout(() => {
+                    //Set to hide preloader
+                    preLoader.style.display = "none";
+                    //Set to display canvas
+                    canvas.style.display = "block";
+                }, 500)
+            }
+        }).then((unityInstance) => { }).catch((message) => window.alert("Error initializing Unity player"));
+    }
+
+    //Append loader to page
+    document.body.appendChild(unityLoader);
+
+</script>
+
+</html>
