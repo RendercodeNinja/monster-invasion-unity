@@ -1,7 +1,9 @@
 # Monster Invasion (Unity)
 A small 2D game made with Unity game engine for an internal event. The making of this game was inspired from the Paratrooper retro game. The project demonstrates a simple enemy AI through coded state machine and animation state machine. An object pooling design pattern was implemented for better resource management.
 
-![alt text](https://raw.githubusercontent.com/EverCG/monster-invasion-unity/main/ss-monster-invasion.png)
+#### [Play WebGL Demo](https://rendercodeninja.github.io/monster-invasion-unity)
+&nbsp;
+![alt text](https://raw.githubusercontent.com/RendercodeNinja/monster-invasion-unity/main/ss-monster-invasion.png)
 
 ### Prerequisites
 * Unity Game Engine (v2022.3.9f1) - This is the latest version to which the project is upgraded.
